@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title></title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-blue w-100 ">
+        <a class="navbar-brand " href="index.php"><img src="image/logo.png" class="img"></a>
+        
+        <button class="navbar-toggler bg-blue" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>  
+        
+        <div class="collapse navbar-collapse   " id="navbarSupportedContent">
+          <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item flex-grow-1 text-center ">
+              <a class="nav-link text-white " href="logout.php">Log out</a>
+            </li>
+            <li class="nav-item dropdown flex-grow-1 text-center " >
+              <a class="nav-link dropdown-toggle  text  " href="#" id="navbardrop" data-toggle="dropdown" >
+                Other
+              </a>
+              <div class="dropdown-menu flex-grow-1 w-100 m-0 ">
+                <a class="dropdown-item down " href="salle.php"  id="1">Rooms </a>
+                <a class="dropdown-item down " href="theme.php"  id="2">Specialties </a>
+                <a class="dropdown-item down " href="province.php"  id="3">Provinces </a>
+                <a class="dropdown-item down " href="document.php"  id="4">Documents </a>
+              </div>
+            </li>
+            <li class="nav-item flex-grow-1 text-center" >
+              <a class="nav-link text " href="formation.php" id="6_">Formations </a>
+            </li>
+            <li class="nav-item flex-grow-1 text-center" >
+              <a class="nav-link text " href="reservation.php" id="3_">Reservations  </a>
+            </li>
+            
+            <li class="nav-item flex-grow-1 text-center" >
+              <a class="nav-link text " href="assosciation.php" id="5_">Associations </a>
+            </li>
+            <li class="nav-item flex-grow-1 text-center">
+              <a class="nav-link text " href="index.php" id="4_">Statistics</a>
+            </li>
+           
+          
+              
+          </ul>
+        </div>
+      </nav>
+      <script>
+        
+        if(window.location.pathname=="/application/assosciation.php")
+        {
+              //document.getElementById("5").classList.add("mystyle");
+              document.getElementById("5_").classList.remove("text");
+              document.getElementById("5_").classList.add("mystyle");
+
+
+        }
+        if(window.location.pathname=="/application/index.php" || window.location.pathname=="/application/")
+        {
+              document.getElementById("4_").classList.add("mystyle");
+              document.getElementById("4_").classList.remove("text");
+
+        }
+        if(window.location.pathname=="/application/reservation.php")
+        {
+              document.getElementById("3_").classList.add("mystyle");
+              document.getElementById("3_").classList.remove("text");
+
+        }
+        if(window.location.pathname=="/application/formation.php")
+        {
+              document.getElementById("6_").classList.add("mystyle");
+              document.getElementById("6_").classList.remove("text");
+
+        }
+        if(window.location.pathname=="/application/province.php" || window.location.pathname=="/application/theme.php" || window.location.pathname=="/application/salle.php" || window.location.pathname=="/application/document.php")
+        {
+              document.getElementById("navbardrop").classList.add("mystyle");
+              document.getElementById("navbardrop").classList.remove("text");
+              if(window.location.pathname=="/application/province.php")
+                {
+                      document.getElementById("3").classList.add("down_");
+                      document.getElementById("3").style.setProperty('color', 'white', 'important');
+                }
+                if(window.location.pathname=="/application/theme.php")
+                {
+                      document.getElementById("2").classList.add("down_");
+                      document.getElementById("2").style.setProperty('color', 'white', 'important');
+                }
+                if(window.location.pathname=="/application/salle.php")
+                {
+                      document.getElementById("1").classList.add("down_");
+                      document.getElementById("1").style.setProperty('color', 'white', 'important');
+                }
+                if(window.location.pathname=="/application/document.php")
+                {
+                      document.getElementById("4").classList.add("down_");
+                      document.getElementById("4").style.setProperty('color', 'white', 'important');
+                }
+
+        }
+      </script>
+</body>
+</html>
